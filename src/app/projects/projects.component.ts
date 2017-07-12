@@ -23,4 +23,8 @@ export class ProjectsComponent implements OnInit {
   onChange(filterOption) {
     this.filterByCategory = filterOption;
   }
+
+  goToDetailPage(clickedProject) {
+  this.router.navigate(['projects', clickedProject.$key]);
+};
 }

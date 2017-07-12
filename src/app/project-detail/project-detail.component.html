@@ -1,0 +1,6 @@
+<h2>This project has id number:{{projectTitle}}</h2>
+<div>
+  <h3>{{(projectToDisplay | async)?.name}}</h3>
+  <h4>{{(projectToDisplay | async)?.creator}}</h4>
+  <p>{{(projectToDisplay | async)?.description}}</p>
+</div>
