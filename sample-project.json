@@ -1,0 +1,23 @@
+{ "projects": [{
+    "name": "New Boardgame",
+    "creator": "Jordan",
+    "goal": 12,
+    "description": "I want to make a game?",
+    "category": "Games/Toys",
+    "balance": 4
+  }, {
+    "name": "New Baby",
+    "creator": "Jun",
+    "goal": 12000,
+    "description": "I want to make a baby?",
+    "category": "People",
+    "balance": 11999
+  }, {
+    "name": "New Technology Apply Within",
+    "creator": "Jorjun",
+    "goal": 21,
+    "description": "I want to make a apply?",
+    "category": "Tech",
+    "balance": 0
+  }]
+}
