@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { Router } from '@angular/router';
 import { Project } from '../project.model';
 import { ProjectService } from '../project.service';
@@ -12,6 +12,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 export class ProjectsComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
+  filterByCategory: string = 'allProjects';
 
   constructor(private router: Router, private projectService: ProjectService) { }
 
@@ -19,4 +20,7 @@ export class ProjectsComponent implements OnInit {
     this.projects = this.projectService.getProjects();
   }
 
+  onChange(filterOption) {
+    this.filterByCategory = filterOption;
+  }
 }

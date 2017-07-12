@@ -1,3 +1,15 @@
-<p>
-  projects works!
-</p>
+<h2>All Projects</h2>
+
+<select (change)='onChange($event.target.value)'>
+  <option value='allProjects' selected='selected'>All Projects</option>
+  <option value='tech'>Tech</option>
+  <option value='people'>People</option>
+  <option value='games'>Games/Toys</option>
+</select>
+
+  <div *ngFor="let project of projects | async | category:filterByCategory" class="panel panel-default">
+    <div class="panel-body">
+      <h3><em>{{project.name}}</em> by {{project.creator}}</h3>
+      <p>{{project.category}}</p>
+    </div>
+  </div>
