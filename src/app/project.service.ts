@@ -29,4 +29,7 @@ export class ProjectService {
                                 category: localUpdatedProject.category
                               });
   }
+  deleteProject(localProjectToDelete){
+    this.getProjectById(localProjectToDelete.$key).remove();
+  }
 }

@@ -20,4 +20,10 @@ export class EditProjectComponent implements OnInit {
   beginUpdatingProject(projectToUpdate){
     this.projectService.updateProject(projectToUpdate);
   }
+
+  beginDeletingProject(projectToDelete){
+    if(confirm("Are you sure you want to end this campaign?")){
+      this.projectService.deleteProject(projectToDelete);
+    }
+  }
 }
