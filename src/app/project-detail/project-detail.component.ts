@@ -20,7 +20,14 @@ export class ProjectDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.projectId = urlParameters['id'];
     });
-    this.projectToDisplay = this.projectService.getProjectById(this.projectId);
+    this.projectToDisplay=this.projectService.getProjectById(this.projectId);
+    this.projectToDisplay.subscribe(response => {
+      console.log(response);
+    })
+    // .subscribe(dataLastEmittedFromObserver => {
+    //  this.projectToDisplay = new Project(dataLastEmittedFromObserver.name, dataLastEmittedFromObserver.creator, dataLastEmittedFromObserver.goal, dataLastEmittedFromObserver.description, dataLastEmittedFromObserver.category);
+
+  //  })
   }
 
 }

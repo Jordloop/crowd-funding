@@ -1,6 +1,7 @@
-<h2>This project has id number:{{projectTitle}}</h2>
 <div>
-  <h3>{{(projectToDisplay | async)?.name}}</h3>
+  <h3>{{(projectToDisplay | async)?.name }}</h3>
   <h4>{{(projectToDisplay | async)?.creator}}</h4>
   <p>{{(projectToDisplay | async)?.description}}</p>
+  <p>{{(projectToDisplay | async)?.balance}}</p>
+  <app-fund-project [projectToDisplay]="projectToDisplay | async"></app-fund-project>
 </div>

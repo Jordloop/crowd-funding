@@ -32,4 +32,29 @@ export class ProjectService {
   deleteProject(localProjectToDelete){
     this.getProjectById(localProjectToDelete.$key).remove();
   }
+
+  // fund(current, donation) {
+  //   var currentBalance = this.getProjectById(localProjectToFund.$key);
+  //   var parsedCurrent = parseInt(currentBalance.balance);
+  //   var parsedDonation = parseInt(donation);
+  //   var total = (parsedCurrent + parsedDonation);
+  //
+  //   currentBalance.update({
+  //     balance: total
+  //   });
+  // }
+  fund(currentProject, donation) {
+    var parsedCurrent = Number(currentProject.balance);
+    console.log(currentProject);
+    var parsedDonation = Number(donation);
+    console.log((parsedDonation))
+    var total = (parsedCurrent + parsedDonation);
+    console.log(typeof(total));
+    var currentBalance = this.getProjectById(currentProject.$key);
+
+    currentBalance.update({
+      balance: total
+    });
+    //console.log(parsedCurrent)
+  }
 }

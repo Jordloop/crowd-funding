@@ -33,3 +33,6 @@ Project Order
 8. Create app.routing file to hold url path's (ex. 'welcome', 'all-projects')
 9. Create object-detail individual page that stem from object listing page
 10. Create admin component for update and delete project functionality.
+
+OPTIONAL????
+11. add "fund" functionality for each individual object to alter 
