@@ -11,5 +11,8 @@
     <div class="panel-body">
       <h3 (click)='goToDetailPage(project)'><em>{{project.name}}</em> by {{project.creator}}</h3>
       <p>{{project.category}}</p>
+    <div *ngIf="currentRoute === '/admin'">
+      <app-edit-project [selectedProject]="project"></app-edit-project>
+    </div>
     </div>
   </div>
