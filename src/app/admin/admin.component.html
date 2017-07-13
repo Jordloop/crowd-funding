@@ -1,0 +1,37 @@
+<h3>Add New Album to Inventory</h3>
+<div>
+  <div>
+    <label>Project Name:</label>
+    <br>
+    <input #newName>
+  </div>
+
+  <div>
+    <label>Project Creator:</label>
+    <br>
+    <input #newCreator>
+  </div>
+
+  <div>
+    <label>Project Goal:</label>
+    <br>
+    <input #newGoal>
+  </div>
+
+  <div>
+    <label>Project Description:</label>
+    <br>
+    <textarea #newDescription cols="75" rows="15"></textarea>
+  </div>
+
+  <div>
+    <label>Project Category:</label>
+    <br>
+    <select #newCategory>
+      <option value="Games/Toys">Games/Toys</option>
+      <option value="Tech">Tech</option>
+      <option value="People">People</option>
+    </select>
+  </div>
+  <button (click)='submitForm(newName.value, newCreator.value, newGoal.value, newDescription.value, newCategory.value)'>Create!</button>
+</div>
