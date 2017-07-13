@@ -42,5 +42,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# firebase
-api-keys.ts
+# Firebase
+/src/app/api-keys.ts
